@@ -1,8 +1,10 @@
 import string
 from scipy import *
 
-def readtxt():
-      f=open("test.txt")
+def readtxt(textfile=None):
+      if textfile==None:
+          textfile="configuration.txt"
+      f=open(textfile)
       l=f.readlines()
       for i in arange(len(l)):
             if string.find(l[i],"file")!=-1:
